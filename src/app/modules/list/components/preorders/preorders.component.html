@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;" *ngIf="personaje">
+  <img class="card-img-top" [src]="personaje.image" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{personaje.name}}</h5>
+    <p class="card-text">Origen : {{personaje.origin.name}}</p>
+    <a [routerLink]="['/list/']" class="btn btn-primary">Volver</a>
+  </div>
+</div>

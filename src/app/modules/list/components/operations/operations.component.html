@@ -1,0 +1,72 @@
+<div class="col-12">
+  <div class="card">
+    <!-- <div class="card-header">
+      <div class="card-title">
+        <h2>Usuarios Registrados</h2>
+      </div>
+    </div> -->
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6">
+          <!-- <app-filter (onFilter)="onFilter($event)"></app-filter> -->
+          <div class="row">
+            <div class="col-12">
+              <!-- <app-filter (onFilter)="onFilter($event)"></app-filter> -->
+            </div>
+          
+     
+          </div>
+         
+         
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-6" style="text-align: right;">
+    
+            </div>
+            <div class="col-6"></div>
+          </div>
+
+        </div>
+        <div class="col-12 table-responsive">
+          <table
+            class="table table-hover mgtop"
+            
+          >
+            <thead class="thead-inverse">
+              <tr>
+            
+                <th style="color:black">ID</th>
+                <th style="color:black">Nombre</th>
+                <th style="color:black">Estatus</th>
+                <th style="color:black">Especie</th>
+                <th style="color:black">Genero</th>
+              </tr>
+            </thead>
+            <tbody >
+             
+              <tr
+                 *ngFor="
+                  let character of (company$ | async)['results']
+                    
+                "
+              >
+      
+        <td><a [routerLink]="['/detalle/',character.id ]">{{character.id}}</a></td>
+        <td>{{character.name}}</td>
+        <td>{{character.status}}</td>
+        <td>{{character.species}}</td>
+        <td>{{character.gender}}</td>
+
+       
+              </tr>
+            </tbody>
+         
+          </table>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+  <!-- {{ users$ | async | json }} -->
+</div>

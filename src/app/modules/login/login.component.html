@@ -1,0 +1,67 @@
+<!-- <div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="Usuario"/>
+        <input type="password" placeholder="Clave"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="">Sign In</a></p>
+      </form>
+      <form class="login-form">
+        <input type="text" placeholder="Usuario"/>
+        <input type="password" placeholder="Clave"/>
+        <button [routerLink]="['/inventory']">login</button>
+        <p class="message">No estas registrado? <a href="#">Crear Cuenta</a></p>
+      </form>
+    </div>
+  </div> -->
+
+<!--Login Page Starts-->
+<section id="login" class="centrar">
+    <div class="container-fluid">
+      <div class="row full-height-vh m-0">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-body login-img">
+                <div class="row m-0">
+                  <div class="col-lg-6 d-lg-block d-none py-2 px-3 text-center align-middle">
+                
+                    <p>Prueba angular 12 y booststrap</p>
+                  </div>
+                  <div class="col-lg-6 col-md-12 bg-white px-4 pt-3">
+                    <form [formGroup]="loginForm">
+                      <h4 class="card-title mb-2">Login</h4>
+                      <p class="card-text mb-3">
+                        Bienvenido, por favor ingrese sus datos
+                      </p>
+                      <label for="email_login">Email</label>
+                      <input type="email" class="form-control mb-3 intall" placeholder="" formControlName="email"
+                        id="email_login" />
+                      <label for="password">Contraseña</label>
+                      <input type="password" class="form-control mb-3 intall" placeholder="" formControlName="password"
+                        id="password" />
+  
+                      <div class="fg-actions d-flex justify-content-between">
+  
+                         <div class="recover-pass">
+                          <button class="btn btn-info" [disabled]="loginForm.invalid" (click)="login()">
+                            <a class="text-decoration-none text-white">Ingresar</a>
+                          </button>
+                        </div>
+  
+                     
+                      </div>
+                    </form>
+                    <hr class="m-0" />
+               
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Login Page Ends-->
